@@ -8,9 +8,6 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
     background-color: #fff;
 }
 
@@ -20,27 +17,32 @@ body {
 }
 
 .home {
-    background-color: #fff600;
+    background-color: #ffffff;
     padding: 10px;
     text-align: center;
     position: relative;
 }
 
+.logo {
+    border: solid;
+}
+
 .home .logo img {
     max-width: 500px;
+    border: solid;
 }
 
 .home .sub_text .text {
     position: relative;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
-    bottom: 80px;
+    bottom: 220px;
     color: #333;
 }
 
 .home .graphics img {
     max-width: 1500px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 /* Section: Description */
