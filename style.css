@@ -74,25 +74,28 @@ body {
 .minion_bob .bob_pic img {
     max-width: 100%;
     flex-wrap: wrap;
-    margin-top: -100px;
+    margin-top: -300px;
 }
 
 .minion_bob .meet_bob {
     max-width: 650px;
     border: solid;
     margin-right: 20px;
+    flex-wrap: wrap;
 }
 
 .minion_bob .meet_bob h3 {
-    font-size: 22px;
+    font-size: 35px;
     font-weight: bold;
     color: orange;
 }
 
 .minion_bob .meet_bob h1 {
-    font-size: 48px;
+    font-size: 70px;
     font-weight: 800;
     color: #333;
+    position: relative;
+    bottom: 30px;
 }
 
 .minion_bob .meet_bob .des_1 {
