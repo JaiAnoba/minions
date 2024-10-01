@@ -24,6 +24,45 @@ body {
     flex-wrap: wrap;
 }
 
+/* Unique Yellow Shape for the Minion Sections */
+
+.minion_bob, .minion_stuart {
+    position: relative;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.minion_bob {
+    background-color: #fff600;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.minion_stuart {
+    background-color: #fff600;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+}
+
+/* Add Yellow Shape Overlay Effect */
+.minion_bob::before, .minion_stuart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff600;
+    z-index: -1;
+}
+
+.minion_bob::before {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.minion_stuart::before {
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+}
+
 .home .logo img {
     max-width: 100%;
     flex-wrap: wrap;
