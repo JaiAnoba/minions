@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.home {
+    background-color: #fff600;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.home .logo img {
+    max-width: 500px;
+}
+
+.home .sub_text .text {
+    position: relative;
+    font-size: 10px;
+    font-weight: bold;
+    bottom: 80px;
+    color: #333;
+}
+
+.home .graphics img {
+    max-width: 1500px;
+    margin-top: 40px;
+}
+
+/* Section: Description */
+.content {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.content .description .des {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section: Minion Bob */
+.minion_bob {
+    display: flex;
+    background-color: #fff600;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+.minion_bob .bob_pic img {
+    max-width: 1500px;
+    margin-right: 40px;
+}
+
+.minion_bob .meet_bob {
+    max-width: 500px;
+}
+
+.minion_bob .meet_bob h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.minion_bob .meet_bob h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.minion_bob .meet_bob .des_1 {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section: Minion Kevin */
+.minon_kevin {
+    display: flex;
+    background-color: #fff;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.minon_kevin .meet_kevin {
+    max-width: 500px;
+    margin-right: 40px;
+}
+
+.minon_kevin .meet_kevin h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.minon_kevin .meet_kevin h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.minon_kevin .meet_kevin .des_2 {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.minon_kevin .kevin_pic img {
+    max-width: 1500px;
+}
+
+/* Section: Minion Stuart */
+.minion_stuart {
+    display: flex;
+    background-color: #fff600;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+.minion_stuart .stuart_pic img {
+    max-width: 1500px;
+    margin-right: 40px;
+}
+
+.minion_stuart .meet_stuart {
+    max-width: 500px;
+}
+
+.minion_stuart .meet_stuart h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.minion_stuart .meet_stuart h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.minion_stuart .meet_stuart .des_3 {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section: End */
+.end {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.end .bye img {
+    max-width: 1500px;
+}
