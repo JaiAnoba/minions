@@ -12,8 +12,8 @@ body {
 }
 
 .wrapper {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-inline: auto;
 }
 
 .home {
@@ -23,39 +23,43 @@ body {
     position: relative;
 }
 
-.logo {
-    border: solid;
-}
-
 .home .logo img {
-    max-width: 500px;
-    border: solid;
+    max-width: 100%;
+    position: relative;
+    bottom: 100px;
 }
 
 .home .sub_text .text {
     position: relative;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
-    bottom: 220px;
+    bottom: 300px;
     color: #333;
 }
 
 .home .graphics img {
     max-width: 1500px;
     margin-top: 30px;
+    position: relative;
+    bottom: 190px;
 }
 
 /* Section: Description */
 .content {
+    height: 500px;
     padding: 40px 20px;
+    position: relative;
     text-align: center;
     background-color: #fff;
+    border: solid;
 }
 
 .content .description .des {
-    font-size: 18px;
+    font-size: 24px;
     color: #333;
     line-height: 1.6;
+    position: relative;
+    top: 100px;
 }
 
 /* Section: Minion Bob */
@@ -72,19 +76,19 @@ body {
 }
 
 .minion_bob .meet_bob {
-    max-width: 500px;
+    max-width: 1000px;
+    border: solid;
 }
 
 .minion_bob .meet_bob h3 {
-    font-size: 22px;
+    font-size: 50px;
     font-weight: bold;
     color: orange;
-    margin-bottom: 10px;
 }
 
 .minion_bob .meet_bob h1 {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 90px;
+    font-weight: 800;
     color: #333;
 }
 
