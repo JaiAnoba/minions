@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-    max-width: 100%;
+    max-width: 1500px;
     margin-inline: auto;
 }
 
@@ -21,45 +21,46 @@ body {
     padding: 10px;
     text-align: center;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .home .logo img {
     max-width: 100%;
+    flex-wrap: wrap;
     position: relative;
-    bottom: 100px;
+    bottom: 200px;
 }
 
 .home .sub_text .text {
     position: relative;
-    font-size: 23px;
-    font-weight: bold;
-    bottom: 300px;
-    color: #333;
+    font-size: 26px;
+    font-weight: 700;
+    bottom: 500px;
+    flex-wrap: wrap;
 }
 
 .home .graphics img {
-    max-width: 1500px;
-    margin-top: 30px;
-    position: relative;
-    bottom: 190px;
+    max-width: 100%;
+    margin-top: -300px;
+    margin-bottom: 78px;
+    flex-wrap: wrap;
 }
 
 /* Section: Description */
-.content {
-    height: 500px;
+.content {  
+    height: 1000px;
     padding: 40px 20px;
     position: relative;
     text-align: center;
     background-color: #fff;
     border: solid;
+    flex-wrap: wrap;
 }
 
 .content .description .des {
-    font-size: 24px;
-    color: #333;
+    font-size: clamp(10px, 3vw, 20px);
     line-height: 1.6;
-    position: relative;
-    top: 100px;
+    flex-wrap: wrap;
 }
 
 /* Section: Minion Bob */
@@ -71,23 +72,25 @@ body {
 }
 
 .minion_bob .bob_pic img {
-    max-width: 1500px;
-    margin-right: 40px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin-top: -100px;
 }
 
 .minion_bob .meet_bob {
-    max-width: 1000px;
+    max-width: 650px;
     border: solid;
+    margin-right: 20px;
 }
 
 .minion_bob .meet_bob h3 {
-    font-size: 50px;
+    font-size: 22px;
     font-weight: bold;
     color: orange;
 }
 
 .minion_bob .meet_bob h1 {
-    font-size: 90px;
+    font-size: 48px;
     font-weight: 800;
     color: #333;
 }
@@ -109,6 +112,8 @@ body {
 
 .minon_kevin .meet_kevin {
     max-width: 500px;
+    position: relative;
+    left: 40px;
     margin-right: 40px;
 }
 
@@ -132,7 +137,7 @@ body {
 }
 
 .minon_kevin .kevin_pic img {
-    max-width: 1500px;
+    max-width: 100%;
 }
 
 /* Section: Minion Stuart */
@@ -144,12 +149,15 @@ body {
 }
 
 .minion_stuart .stuart_pic img {
-    max-width: 1500px;
+    max-width: 100%;
     margin-right: 40px;
 }
 
 .minion_stuart .meet_stuart {
     max-width: 500px;
+    margin-left: 40px;
+    position: relative;
+    right: 40px;
 }
 
 .minion_stuart .meet_stuart h3 {
@@ -179,5 +187,5 @@ body {
 }
 
 .end .bye img {
-    max-width: 1500px;
+    max-width: 100%;
 }
