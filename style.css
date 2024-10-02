@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* Unique Yellow Shape for the Minion Sections */
+/* Yellow Shape for Minion Sections */
 
 .minion_bob, .minion_stuart {
     position: relative;
@@ -43,7 +44,7 @@ body {
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
 }
 
-/* Add Yellow Shape Overlay Effect */
+/* Yellow Shape Effect */
 .minion_bob::before, .minion_stuart::before {
     content: '';
     position: absolute;
@@ -64,43 +65,222 @@ body {
 }
 
 .home .logo img {
-    max-width: 100%;
+    max-width: 10%;
     flex-wrap: wrap;
     position: relative;
-    bottom: 200px;
+    margin-bottom: 200px;
 }
 
 .home .sub_text .text {
-    position: relative;
-    font-size: 26px;
+    font-size: 8px;
     font-weight: 700;
-    bottom: 500px;
+    margin-top: -260px;
+    margin-bottom: 350px;
     flex-wrap: wrap;
 }
 
 .home .graphics img {
     max-width: 100%;
-    margin-top: -300px;
-    margin-bottom: 78px;
+    margin-top: -250px;
+    margin-bottom: 150px;
     flex-wrap: wrap;
 }
 
 /* Section: Description */
-.content {  
-    height: 1000px;
-    padding: 40px 20px;
-    position: relative;
-    text-align: center;
-    background-color: #fff;
-    border: solid;
-    flex-wrap: wrap;
-}
+  
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1120px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --small-font-size: .875rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  
+  .card_article img {
+    display: block;
+    max-width: 100%;
+    height: 400px;
+  }
+  
+  /*=============== CARD ===============*/
+  .container {
+    display: grid;
+    place-items: center;
+    padding-block: 5rem;
+  }
 
-.content .description .des {
-    font-size: clamp(10px, 3vw, 20px);
-    line-height: 1.6;
-    flex-wrap: wrap;
-}
+  .header .txt {
+    font-size: 60px;
+    margin-top: -100px;
+  }
+  
+  .card_container {
+    display: grid;
+    row-gap: 4rem;
+    margin-top: -250px;
+  }
+  
+  .card_article {
+    position: relative;
+    overflow: hidden;
+  }
+
+ .min_bob, .min_kev, .min_stua {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) scale(0.7);
+    z-index: 1;
+  }
+  
+  .card_img {
+    position: relative; 
+    width: 328px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .card__data {
+    width: 280px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+  }
+  
+  .card__description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+  }
+  
+  .card__title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+  }
+  
+  .card__button {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .card__button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Naming animations in hover */
+  .card_article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+  }
+  
+  .card_article:hover {
+    animation: remove-overflow 2s forwards;
+  }
+  
+  .card_article:not(:hover) {
+    animation: show-overflow 2s forwards;
+  }
+  
+  .card_article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+  }
+  
+  /* Card animation */
+  @keyframes show-data {
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(-7rem);
+    }
+  }
+  
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+  
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-7rem);
+    }
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(.5rem);
+    }
+  }
+  
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    50% {
+      overflow: hidden;
+    }
+  }
+  
+  /*=============== BREAKPOINTS ===============*/
+  /* For small devices */
+  @media screen and (max-width: 340px) {
+    .container {
+      height: 1000px;
+      margin-inline: 1rem;
+    }
+  
+    .card__data {
+      width: 250px;
+      padding: 1rem;
+    }
+  }
+  
+  /* For medium devices */
+  @media screen and (min-width: 768px) {
+    .card_container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
+    }
+
+    .container {
+        height: 1000px;
+        margin-inline: 1rem;
+      }
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 1120px) {
+    .container {
+      height: 1000px;
+    }
+  
+    .card_container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card_img {
+      width: 348px;
+    }
+    .card__data {
+      width: 316px;
+      padding-inline: 2.5rem;
+    }
+  }
 
 /* Section: Minion Bob */
 .minion_bob {
@@ -111,34 +291,34 @@ body {
 }
 
 .minion_bob .bob_pic img {
-    max-width: 100%;
+    max-width: 90%;
     flex-wrap: wrap;
     margin-top: -300px;
 }
 
 .minion_bob .meet_bob {
     max-width: 650px;
-    border: solid;
-    margin-right: 20px;
+    margin: 0 20px 60px 0;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .minion_bob .meet_bob h3 {
-    font-size: 35px;
+    font-size: clamp(10px, 3vw, 50px);
     font-weight: bold;
     color: orange;
+    margin-bottom: 40px;
 }
 
 .minion_bob .meet_bob h1 {
-    font-size: 70px;
+    font-size: clamp(30px, 10vw, 150px);
     font-weight: 800;
-    color: #333;
-    position: relative;
-    bottom: 30px;
+    color: #ffffff;
+    margin-top: -60px;
 }
 
 .minion_bob .meet_bob .des_1 {
-    font-size: 18px;
+    font-size: clamp(10px, 2vw, 18px);
     color: #333;
     line-height: 1.6;
 }
@@ -153,27 +333,28 @@ body {
 }
 
 .minon_kevin .meet_kevin {
-    max-width: 500px;
-    position: relative;
-    left: 40px;
-    margin-right: 40px;
+    max-width: 650px;
+    margin: 0 40px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .minon_kevin .meet_kevin h3 {
-    font-size: 22px;
+    font-size: clamp(10px, 3vw, 30px);
     font-weight: bold;
     color: orange;
     margin-bottom: 10px;
 }
 
 .minon_kevin .meet_kevin h1 {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: clamp(20px, 8vw, 70px);
+    font-weight: 800;
     color: #333;
+    margin-top: -20px;
 }
 
 .minon_kevin .meet_kevin .des_2 {
-    font-size: 18px;
+    font-size: clamp(10px, 2vw, 18px);
     color: #333;
     line-height: 1.6;
 }
@@ -196,27 +377,28 @@ body {
 }
 
 .minion_stuart .meet_stuart {
-    max-width: 500px;
-    margin-left: 40px;
-    position: relative;
-    right: 40px;
+    max-width: 650px;
+    margin: 0 40px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .minion_stuart .meet_stuart h3 {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: clamp(10px, 3vw, 30px);
+    font-weight: 800;
     color: orange;
     margin-bottom: 10px;
 }
 
 .minion_stuart .meet_stuart h1 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #333;
+    font-size: clamp(20px, 8vw, 70px);
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: -20px;
 }
 
 .minion_stuart .meet_stuart .des_3 {
-    font-size: 18px;
+    font-size: clamp(10px, 2vw, 18px);
     color: #333;
     line-height: 1.6;
 }
