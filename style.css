@@ -65,38 +65,30 @@ body {
 }
 
 .home .logo img {
-    max-width: 10%;
+    max-width: 20%;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 .home .sub_text .text {
-    font-size: 8px;
+    font-size: 15px;
     font-weight: 700;
-    margin-top: -260px;
-    margin-bottom: 350px;
+    margin-top: -275px;
+    margin-bottom: 450px;
     flex-wrap: wrap;
 }
 
 .home .graphics img {
     max-width: 100%;
-    margin-top: -250px;
+    margin-top: -300px;
     margin-bottom: 150px;
     flex-wrap: wrap;
 }
 
-/* Section: Description */
-  
-  /*========== Responsive typography ==========*/
-  @media screen and (min-width: 1120px) {
-    :root {
-      --h2-font-size: 1.5rem;
-      --small-font-size: .875rem;
-    }
-  }
-  
-  /*=============== BASE ===============*/
+/* Section: CONTAINER */
+
+  /* BASE */
   
   .card_article img {
     display: block;
@@ -104,7 +96,7 @@ body {
     height: 400px;
   }
   
-  /*=============== CARD ===============*/
+  /* CARD */
   .container {
     display: grid;
     place-items: center;
@@ -118,7 +110,7 @@ body {
   
   .card_container {
     display: grid;
-    row-gap: 4rem;
+    row-gap: 5rem;
     margin-top: -250px;
   }
   
@@ -236,51 +228,6 @@ body {
       overflow: hidden;
     }
   }
-  
-  /*=============== BREAKPOINTS ===============*/
-  /* For small devices */
-  @media screen and (max-width: 340px) {
-    .container {
-      height: 1000px;
-      margin-inline: 1rem;
-    }
-  
-    .card__data {
-      width: 250px;
-      padding: 1rem;
-    }
-  }
-  
-  /* For medium devices */
-  @media screen and (min-width: 768px) {
-    .card_container {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 1.5rem;
-    }
-
-    .container {
-        height: 1000px;
-        margin-inline: 1rem;
-      }
-  }
-  
-  /* For large devices */
-  @media screen and (min-width: 1120px) {
-    .container {
-      height: 1000px;
-    }
-  
-    .card_container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .card_img {
-      width: 348px;
-    }
-    .card__data {
-      width: 316px;
-      padding-inline: 2.5rem;
-    }
-  }
 
 /* Section: Minion Bob */
 .minion_bob {
@@ -291,14 +238,16 @@ body {
 }
 
 .minion_bob .bob_pic img {
-    max-width: 90%;
+    max-width: 70%;
     flex-wrap: wrap;
-    margin-top: -300px;
+    position: relative;
+    left: 50px;
+    margin-top: -250px;
 }
 
 .minion_bob .meet_bob {
     max-width: 650px;
-    margin: 0 20px 60px 0;
+    margin: 0 40px 60px 0;
     flex-wrap: wrap;
     padding: 20px;
 }
@@ -334,20 +283,20 @@ body {
 
 .minon_kevin .meet_kevin {
     max-width: 650px;
-    margin: 0 40px;
+    margin: 0 60px;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 .minon_kevin .meet_kevin h3 {
-    font-size: clamp(10px, 3vw, 30px);
+    font-size: clamp(10px, 3vw, 50px);
     font-weight: bold;
     color: orange;
     margin-bottom: 10px;
 }
 
 .minon_kevin .meet_kevin h1 {
-    font-size: clamp(20px, 8vw, 70px);
+    font-size: clamp(30px, 10vw, 130px);
     font-weight: 800;
     color: #333;
     margin-top: -20px;
@@ -360,7 +309,8 @@ body {
 }
 
 .minon_kevin .kevin_pic img {
-    max-width: 100%;
+    max-width: 90%;
+    flex-wrap: wrap;
 }
 
 /* Section: Minion Stuart */
@@ -372,26 +322,29 @@ body {
 }
 
 .minion_stuart .stuart_pic img {
-    max-width: 100%;
+    max-width: 90%;
     margin-right: 40px;
+    flex-wrap: wrap;
+    position: relative;
+    left: 100px;
 }
 
 .minion_stuart .meet_stuart {
     max-width: 650px;
-    margin: 0 40px;
+    margin: 0 90px;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 .minion_stuart .meet_stuart h3 {
-    font-size: clamp(10px, 3vw, 30px);
-    font-weight: 800;
+    font-size: clamp(10px, 3vw, 50px);
+    font-weight: bold;
     color: orange;
     margin-bottom: 10px;
 }
 
 .minion_stuart .meet_stuart h1 {
-    font-size: clamp(20px, 8vw, 70px);
+    font-size: clamp(30px, 10vw, 130px);
     font-weight: 800;
     color: #ffffff;
     margin-top: -20px;
@@ -413,3 +366,70 @@ body {
 .end .bye img {
     max-width: 100%;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 30px;
+}
+
+footer img {
+    flex-wrap: wrap;
+    width: 30px;
+    height: 30px;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 5px;
+    margin-top: -10px;
+}
+
+/* For small devices */
+@media screen and (max-width: 340px) {
+    .container {
+      height: 1000px;
+      margin-inline: 1rem;
+    }
+    
+    .card__data {
+      width: 250px;
+      padding: 1rem;
+    }
+  }
+    
+  /* For medium devices */
+  @media screen and (min-width: 768px) {
+    .card_container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
+    }
+    .container {
+        height: 1000px;
+        margin-inline: 1rem;
+      }
+  }
+    
+  /* For large devices */
+  @media screen and (min-width: 1120px) {
+    .container {
+      height: 1000px;
+    }
+    
+    .card_container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card_img {
+      width: 348px;
+    }
+    .card__data {
+      width: 316px;
+      padding-inline: 2.5rem;
+    }
+  }
