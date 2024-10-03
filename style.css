@@ -103,9 +103,10 @@ body {
     padding-block: 5rem;
   }
 
-  .header .txt {
-    font-size: 60px;
-    margin-top: -100px;
+  .header .title_img {
+    max-width: 70%;
+    position: relative;
+    left: 100px;
   }
   
   .card_container {
@@ -129,13 +130,13 @@ body {
   
   .card_img {
     position: relative; 
-    width: 328px;
+    width: 300px;
     border-radius: 1.5rem;
     overflow: hidden;
   }
   
   .card__data {
-    width: 280px;
+    width: 200px;
     padding: 1.5rem 2rem;
     box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
     border-radius: 1rem;
@@ -172,7 +173,7 @@ body {
     text-decoration: underline;
   }
   
-  /* Naming animations in hover */
+  /* Naming animations */
   .card_article:hover .card__data {
     animation: show-data 1s forwards;
     opacity: 1;
@@ -260,14 +261,14 @@ body {
 }
 
 .minion_bob .meet_bob h1 {
-    font-size: clamp(30px, 10vw, 150px);
+    font-size: clamp(25px, 9vw, 150px);
     font-weight: 800;
     color: #ffffff;
     margin-top: -60px;
 }
 
 .minion_bob .meet_bob .des_1 {
-    font-size: clamp(10px, 2vw, 18px);
+    font-size: clamp(10px, 1.5vw, 18px);
     color: #333;
     line-height: 1.6;
 }
@@ -378,8 +379,8 @@ footer {
 
 footer img {
     flex-wrap: wrap;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .foot {
@@ -391,45 +392,44 @@ footer img {
     margin-top: -10px;
 }
 
-/* For small devices */
-@media screen and (max-width: 340px) {
+    
+  /* For medium devices */
+  @media (min-width: 340px) and (max-width: 768px) {
+    .card_container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2.5rem;
+    }
     .container {
       height: 1000px;
       margin-inline: 1rem;
     }
-    
     .card__data {
       width: 250px;
       padding: 1rem;
     }
-  }
-    
-  /* For medium devices */
-  @media screen and (min-width: 768px) {
-    .card_container {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 1.5rem;
+    .minion_bob .bob_pic img{
+      max-width: 150%;
+      top: 80px;
     }
-    .container {
-        height: 1000px;
-        margin-inline: 1rem;
-      }
+    .minion_bob .meet_bob {
+      max-width: 450px;   
+      margin-left: 100px;    
+    }
   }
     
   /* For large devices */
-  @media screen and (min-width: 1120px) {
+  @media (min-width: 769px) and (max-width: 950px) {
     .container {
       height: 1000px;
     }
-    
     .card_container {
       grid-template-columns: repeat(3, 1fr);
     }
     .card_img {
-      width: 348px;
+      width: 330px;
     }
     .card__data {
-      width: 316px;
+      width: 285px;
       padding-inline: 2.5rem;
     }
   }
