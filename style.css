@@ -93,7 +93,7 @@ body {
   .card_article img {
     display: block;
     max-width: 100%;
-    height: 400px;
+   
   }
   
   /* CARD */
@@ -101,6 +101,7 @@ body {
     display: grid;
     place-items: center;
     padding-block: 5rem;
+    border: solid;
   }
 
   .header .title_img {
@@ -110,13 +111,17 @@ body {
   }
   
   .card_container {
-    display: grid;
-    row-gap: 5rem;
-    margin-top: -250px;
+    display: flex;
+
+    flex-direction: row;
+    row-gap: 2rem;
+    column-gap: 2rem;
+   
   }
   
   .card_article {
     position: relative;
+    max-width: 100%;
     overflow: hidden;
   }
 
@@ -129,14 +134,14 @@ body {
   }
   
   .card_img {
-    position: relative; 
-    width: 300px;
+    margin-inline: auto;
+    width: 80%;
     border-radius: 1.5rem;
     overflow: hidden;
+   
   }
   
   .card__data {
-    width: 200px;
     padding: 1.5rem 2rem;
     box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
     border-radius: 1rem;
@@ -395,12 +400,12 @@ footer img {
     
   /* For medium devices */
   @media (min-width: 340px) and (max-width: 768px) {
-    .card_container {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 2.5rem;
-    }
+    /* .card_container { */
+      /* grid-template-columns: repeat(2, 1fr); */
+      /* column-gap: 2.5rem; */
+    /* } */
     .container {
-      height: 1000px;
+      
       margin-inline: 1rem;
     }
     .card__data {
@@ -420,11 +425,31 @@ footer img {
   /* For large devices */
   @media (min-width: 769px) and (max-width: 950px) {
     .container {
+     
+    }
+    /* .card_container { */
+      /* display: flex; */
+      /* flex-direction: row; */
+      /* grid-template-columns: repeat (autofit, minmax(250px, 1fr)); */
+    /* } */
+    .card_img {
+      width: 330px;
+    }
+    .card__data {
+      width: 285px;
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 951px) and (max-width: 1120px) {
+    .container {
       height: 1000px;
     }
-    .card_container {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    /* .card_container { */
+      /* display: flex; */
+      /* flex-direction: row; */
+      /* grid-template-columns: repeat (autofit, minmax(250px, 1fr)); */
+    /* } */
     .card_img {
       width: 330px;
     }
