@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    transition-behavior: smooth;
 }
 
 body {
@@ -65,18 +66,12 @@ body {
 }
 
 .home .logo img {
-    max-width: 20%;
+    max-width: 100%;
+    margin-inline: auto;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 150px;
-}
-
-.home .sub_text .text {
-    font-size: 15px;
-    font-weight: 700;
-    margin-top: -275px;
     margin-bottom: 450px;
-    flex-wrap: wrap;
+    margin-top: 90px;
 }
 
 .home .graphics img {
@@ -93,7 +88,6 @@ body {
   .card_article img {
     display: block;
     max-width: 100%;
-   
   }
   
   /* CARD */
@@ -103,26 +97,25 @@ body {
     align-items: center;
     place-items: center;
     padding-block: 5rem;
-    border: solid;
   }
 
-  .header .title_img {
+  .card_header .title_img {
     max-width: 100%;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    padding-bottom: 150px;
   }
   
   .card_container {
     display: flex;
     flex-direction: row;
-    border: solid;
+    margin-bottom: 80px;
   }
   
   .card_article {
     position: relative;
     max-width: 100%;
     overflow: hidden;
-
   }
 
  .min_bob, .min_kev, .min_stua {
@@ -147,7 +140,6 @@ body {
   .card__data {
     max-width: 70%;
     padding: 1.5rem 2rem;
-    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
     border-radius: 1rem;
     position: absolute;
     left: 0;
@@ -156,27 +148,31 @@ body {
     opacity: 0;
     transition: opacity 1s 1s;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
-    backdrop-filter: blur(5px); /* blur effect */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border for glass look */
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px); 
+    overflow-wrap: break-word; 
+    word-break: break-all; 
+    overflow: hidden; 
+    box-sizing: border-box; 
+    font-size: 1rem;
   }
   
   .card__description {
     display: block;
-    font-size: var(--small-font-size);
     margin-bottom: .25rem;
+    font-size: clamp(10px, 2vw, 15px); 
   }
   
   .card__title {
-    font-size: 30px;
+    font-size: clamp(20px, 3vw, 30px); 
     font-weight: 800;
-    color: var(--title-color);
     margin-bottom: .75rem;
   }
   
   .card__button {
     text-decoration: none;
-    font-size: 15px;
+    font-size: clamp(10px, 1.5vw, 15px);
     font-weight: 500;
     color: #000000;
   }
@@ -246,20 +242,20 @@ body {
 .minion_bob {
     display: flex;
     background-color: #fff600;
-    padding: 40px 20px;
+    padding: 85px 20px;
     align-items: center;
 }
 
 .minion_bob .bob_pic img {
-    max-width: 70%;
+    max-width: 100%;
     flex-wrap: wrap;
     position: relative;
-    left: 50px;
-    margin-top: -250px;
+    left: 30px;
+    margin-right: 70px;
 }
 
 .minion_bob .meet_bob {
-    max-width: 650px;
+    max-width: 550px;
     margin: 0 40px 60px 0;
     flex-wrap: wrap;
     padding: 20px;
@@ -280,13 +276,13 @@ body {
 }
 
 .minion_bob .meet_bob .des_1 {
-    font-size: clamp(10px, 1.5vw, 18px);
+    font-size: clamp(12px, 1.5vw, 18px);
     color: #333;
     line-height: 1.6;
 }
 
 /* Section: Minion Kevin */
-.minon_kevin {
+.minion_kevin {
     display: flex;
     background-color: #fff;
     padding: 40px 20px;
@@ -294,52 +290,51 @@ body {
     justify-content: flex-end;
 }
 
-.minon_kevin .meet_kevin {
-    max-width: 650px;
+.minion_kevin .meet_kevin {
+    max-width: 450px;
     margin: 0 60px;
     flex-wrap: wrap;
     padding: 20px;
 }
 
-.minon_kevin .meet_kevin h3 {
+.minion_kevin .meet_kevin h3 {
     font-size: clamp(10px, 3vw, 50px);
     font-weight: bold;
     color: orange;
     margin-bottom: 10px;
 }
 
-.minon_kevin .meet_kevin h1 {
-    font-size: clamp(30px, 10vw, 130px);
+.minion_kevin .meet_kevin h1 {
+    font-size: clamp(25px, 9vw, 150px);
     font-weight: 800;
     color: #333;
     margin-top: -20px;
 }
 
-.minon_kevin .meet_kevin .des_2 {
-    font-size: clamp(10px, 2vw, 18px);
+.minion_kevin .meet_kevin .des_2 {
+    font-size: clamp(12px, 1.5vw, 18px);
     color: #333;
     line-height: 1.6;
 }
 
-.minon_kevin .kevin_pic img {
-    max-width: 90%;
+.minion_kevin .kevin_pic img {
+    max-width: 130%;
     flex-wrap: wrap;
+    margin-right: 50px;
 }
 
 /* Section: Minion Stuart */
 .minion_stuart {
     display: flex;
     background-color: #fff600;
-    padding: 40px 20px;
+    padding: 120px 20px;
     align-items: center;
 }
 
 .minion_stuart .stuart_pic img {
-    max-width: 90%;
-    margin-right: 40px;
-    flex-wrap: wrap;
-    position: relative;
-    left: 100px;
+  max-width: 120%;
+  flex-wrap: wrap;
+  margin-right: 70px;
 }
 
 .minion_stuart .meet_stuart {
@@ -350,21 +345,21 @@ body {
 }
 
 .minion_stuart .meet_stuart h3 {
-    font-size: clamp(10px, 3vw, 50px);
+    font-size: clamp(10px, 3vw, 50px);  
     font-weight: bold;
     color: orange;
     margin-bottom: 10px;
 }
 
 .minion_stuart .meet_stuart h1 {
-    font-size: clamp(30px, 10vw, 130px);
+    font-size: clamp(25px, 9vw, 150px);
     font-weight: 800;
     color: #ffffff;
     margin-top: -20px;
 }
 
 .minion_stuart .meet_stuart .des_3 {
-    font-size: clamp(10px, 2vw, 18px);
+    font-size: clamp(12px, 1.5vw, 18px);
     color: #333;
     line-height: 1.6;
 }
@@ -403,64 +398,193 @@ footer img {
     padding-bottom: 5px;
     margin-top: -10px;
 }
-
     
   /* For medium devices */
-  @media (min-width: 340px) and (max-width: 768px) {
-    /* .card_container { */
-      /* grid-template-columns: repeat(2, 1fr); */
-      /* column-gap: 2.5rem; */
-    /* } */
+  @media (min-width: 480px) and (max-width: 770px) {
+    .home .graphics img {
+      max-width: 80%;  
+      transition-behavior: smooth;
+    }
+    /*CARD*/
     .container {  
       margin-inline: 1rem;
     }
+    .card_header .title_img {
+      max-width: 70%;
+      left: 135px;
+    }
     .card__data {
-   
+      max-width: 65%;
+      height: 100px;
       padding: 1rem;
     }
+    .card__description {
+      font-size: 12px;
+    }  
+    .card__title {
+      font-size: 25px;
+      margin-top: -5px;
+      margin-bottom: -7px;
+    }  
+    .card__button {
+      font-size: 12px;
+    }
+    @keyframes show-data {
+      50% {
+        transform: translateY(-8rem);
+      }
+      100% {
+        transform: translateY(-3rem);
+      }
+    }
+
     .minion_bob .bob_pic img{
-      max-width: 150%;
-      top: 80px;
+      max-width: 200%;
     }
     .minion_bob .meet_bob {
       max-width: 450px;   
-      margin-left: 100px;    
+      margin-left: 130px;    
+    }
+    .minion_kevin .kevin_pic img{
+      max-width: 150%;
+      top: 80px;
+      margin-left: -65px;
+      margin-right: 90px;
+    }
+    .minion_kevin .meet_kevin {
+      max-width: 450px;    
+    }
+    .minion_stuart .stuart_pic img{
+      max-width: 140%;
+      margin-left: 30px;
+    }
+    .minion_stuart .meet_stuart {
+      margin-left: 130px;    
     }
   }
     
   /* For large devices */
-  @media (min-width: 769px) and (max-width: 950px) {
-    .container {
-      
+  @media (min-width: 771px) and (max-width: 950px) {
+    .home .graphics img {
+      transition-behavior: smooth;
+      max-width: 90%;
     }
-    /* .card_container { */
-      /* display: flex; */
-      /* flex-direction: row; */
-      /* grid-template-columns: repeat (autofit, minmax(250px, 1fr)); */
-    /* } */
-    .card_img {
-      width: 330px;
+    /*CARD*/
+    .container {  
+      margin-inline: 1rem;
+    }
+    .card_header .title_img {
+      transition-behavior: smooth;
+      max-width: 65%;
+      left: 135px;
     }
     .card__data {
-      
-      padding-inline: 2.5rem;
+      max-width: 65%;
+      height: 100px;
+      padding: 1rem;
+    }
+    .card__description {
+      font-size: 12px;
+    }  
+    .card__title {
+      font-size: 25px;
+      margin-top: -5px;
+      margin-bottom: -7px;
+    }  
+    .card__button {
+      font-size: 12px;
+    }
+    @keyframes show-data {
+      50% {
+        transform: translateY(-8rem);
+      }
+      100% {
+        transform: translateY(-3rem);
+      }
+    }
+    .minion_bob .bob_pic img{
+      max-width: 185%;  
+    }
+    .minion_bob .meet_bob {
+      max-width: 550px;   
+      margin-left: 130px;    
+    }
+    .minion_kevin .kevin_pic img{
+      max-width: 150%;
+      top: 80px;
+      margin-left: -100px;
+      margin-right: 90px;
+    }
+    .minion_kevin .meet_kevin {
+      max-width: 450px;    
+    }
+    .minion_stuart .stuart_pic img{
+      max-width: 140%;
+      margin-left: 30px;
+    }
+    .minion_stuart .meet_stuart {  
+      margin-left: 130px;   
     }
   }
 
-  @media (min-width: 951px) and (max-width: 1120px) {
-    .container {
-      
+  @media (max-width: 951px) {
+    .home .graphics img {
+      transition-behavior: smooth;
+      max-width: 100%;
     }
-    /* .card_container { */
-      /* display: flex; */
-      /* flex-direction: row; */
-      /* grid-template-columns: repeat (autofit, minmax(250px, 1fr)); */
-    /* } */
-    .card_img {
-      width: 330px;
+    /*CARD*/
+    .container {  
+      margin-inline: 1rem;
+    }
+    .card_header .title_img {
+      transition-behavior: smooth;
+      max-width: 70%;
+      left: 115px;
     }
     .card__data {
-    
-      padding-inline: 2.5rem;
+      max-width: 65%;
+      height: 100px;
+      padding: 1rem;
+    }
+    .card__description {
+      font-size: 12px;
+    }  
+    .card__title {
+      font-size: 25px;
+      margin-top: -5px;
+      margin-bottom: -7px;
+    }  
+    .card__button {
+      font-size: 12px;
+    }
+    @keyframes show-data {
+      50% {
+        transform: translateY(-8rem);
+      }
+      100% {
+        transform: translateY(-3rem);
+      }
+    }
+    .minion_bob .bob_pic img{
+      max-width: 185%;  
+    }
+    .minion_bob .meet_bob {
+      max-width: 550px;   
+      margin-left: 130px;    
+    }
+    .minion_kevin .kevin_pic img{
+      max-width: 140%;
+      top: 80px;
+      margin-right: 90px;
+    }
+    .minion_kevin .meet_kevin {
+      max-width: 450px;    
+    }
+    .minion_stuart .stuart_pic img{
+      max-width: 140%;
+      margin-left: 20px;
+    }
+    .minion_stuart .meet_stuart {  
+      margin-left: 130px;   
     }
   }
