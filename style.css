@@ -255,7 +255,7 @@ body {
 }
 
 .minion_bob .meet_bob {
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 40px 60px 0;
     flex-wrap: wrap;
     padding: 20px;
@@ -372,7 +372,7 @@ body {
 }
 
 .end .bye img {
-    max-width: 100%;
+    width: 70%;
 }
 
 footer {
@@ -386,15 +386,14 @@ footer {
 
 footer img {
     flex-wrap: wrap;
-    width: 40px;
-    height: 40px;
+    width: 4.5%;
 }
 
 .foot {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 15px;
+    font-size: clamp(15px, 1.5vw, 25px);
     padding-bottom: 5px;
     margin-top: -10px;
 }
