@@ -409,8 +409,8 @@ footer img {
       margin-inline: 1rem;
     }
     .card_header .title_img {
-      max-width: 70%;
-      left: 135px;
+      max-width: 75%;
+      padding-right: 40px;
     }
     .card__data {
       max-width: 65%;
@@ -474,7 +474,7 @@ footer img {
     }
     .card_header .title_img {
       transition-behavior: smooth;
-      max-width: 65%;
+      max-width: 70%;
       left: 135px;
     }
     .card__data {
